@@ -6,3 +6,4 @@
 
 vim.opt.spell = false
 vim.opt.list = false
+vim.opt.clipboard = "unnamedplus"
