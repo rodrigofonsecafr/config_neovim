@@ -1,5 +1,4 @@
 return {
-  -- PARTE 1: Instala o tema Rose Pine e configura a transparência
   {
     "rose-pine/neovim",
     name = "rose-pine",
@@ -12,16 +11,27 @@ return {
       styles = {
         bold = true,
         italic = true,
-        transparency = true, -- A mágica da transparência
+        transparency = true,
       },
     },
   },
 
-  -- PARTE 2: Manda o LazyVim usar esse tema como padrão
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("tokyonight").setup({
+        style = "storm",
+        transparent = true,
+      })
+      vim.cmd([[colorscheme tokyonight]])
+    end,
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight",
     },
   },
 }
