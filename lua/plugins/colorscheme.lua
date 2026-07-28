@@ -17,21 +17,31 @@ return {
   },
 
   {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      flavour = "mocha", -- A variante mais escura do Catppuccin
+    },
+  },
+  {
     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("tokyonight").setup({
-        style = "storm",
-        transparent = true,
-      })
-      vim.cmd([[colorscheme tokyonight]])
-    end,
+    opts = {
+      style = "night",
+    },
+  },
+  {
+    "scottmckendry/cyberdream.nvim",
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    opts = {
+      theme = "dragon", -- Versão super escura do Kanagawa
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "catppuccin",
     },
   },
 }
