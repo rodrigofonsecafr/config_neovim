@@ -1,5 +1,11 @@
 return {
   {
+    "Shatur/neovim-ayu",
+    opts = {
+      mirage = false,
+    },
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
     opts = {
@@ -41,7 +47,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "ayu-dark",
     },
   },
 }
